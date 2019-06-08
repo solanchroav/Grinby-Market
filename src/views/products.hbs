@@ -1,0 +1,16 @@
+{{>navigation}}
+
+{{#each lista}}
+    <div>{{this.categoria}}</div>
+    
+    
+    {{#each this.listaParcial}}
+       <div>{{this.letra}}</div>
+       {{#each this.lista}}
+        <ul> 
+            <li>{{this.Nombre}}</li> 
+        </ul>
+       {{/each}}
+    {{/each}}
+    
+{{/each}}

@@ -1,0 +1,65 @@
+{{> messages}}
+
+<div class="style_membership">
+    <div class="form_nav">
+        <nav>
+            <a href="/"><img src="/public/img/logo.png" alt="logo secundario" width="10%" height="4%"></a>
+        </nav>
+    </div>
+    <div class="form_to_the_right">
+        <div class="col-md-11 card-default card-white">
+            <form role="form" method="POST" class="inner" action="/members/account-member">
+                <h1 class="card-title">Forma parte de la comunidad de<br><strong>Marcas Sustentables</strong></h1>
+                <p>Para empezar el proceso de aplicación, registrese aquí.</p>
+                <div class="form-group">
+                    <input class="form-control" id="id_brand_name" maxlength="75" name="brand_name" placeholder="Nombre del Negocio" type="text" required />
+                </div><hr>
+                <div class="form-group">
+                    <input class="form-control" id="id_first_name" maxlength="75" name="first_name" placeholder="Nombre" type="text" required />
+                </div>
+                <div class="form-group"><input class="form-control" id="id_last_name" maxlength="75" name="last_name" placeholder="Apellido" type="text" required />
+                </div>
+                <div class="form-group"><input class="form-control" id="id_job_title" maxlength="100" name="job_title" placeholder="Empleo" type="text" required />
+                </div>
+                <div class="form-group"><input class="form-control" id="id_phone" maxlength="20" name="phone" placeholder="Telefono" type="text" required />
+                </div><hr>
+                <div class="form-group"><input class="form-control" id="id_website" maxlength="100" name="website" placeholder="Sitio Web" type="text"/>
+                </div><hr>
+                <div class="form-group"><input autocorrect="off" class="form-control" id="id_email" maxlength="75" name="email" placeholder="Email del contacto" type="email" required />
+                </div>
+                <div class="form-group"><input autocomplete="off" autocorrect="off" class="form-control" id="id_email_confirmation" maxlength="75" name="email_confirmation" placeholder="Confirma el email de contacto" type="email" required />
+                </div>
+                <div class="form-group"><label for="id_password">
+                    Password must be at least 8 characters long, with a number, uppercase letter and special character.
+                    </label>
+                    <input autocomplete="off" autocorrect="off" class="form-control" id="id_password" maxlength="128" name="password" placeholder="Contraseña" type="password" required />
+                </div>
+                <div class="form-group"><input autocomplete="off" autocorrect="off" class="form-control" id="id_password_confirmation" maxlength="128" name="password_confirmation" placeholder="Confirma contraseña" type="password" required />
+                </div>
+                 <button class="btn btn-light btn-block">
+                    Enviar 
+                </button>
+            </form>
+        </div>
+    </div>
+    <div class="form_to_the_left">
+        <div class="col-md-10 card-default card-green">
+            <form role="form" method="POST" class="inner" action="/members/recicle">
+                <h1 class="card-title">Acceder para<br><strong>Miembros</strong></h1>
+                <p>Si ya eres una marca registrada en Grinby, por favor acceda aquí.</p>
+                <div class="form-group"><input class="form-control" id="id_email" maxlength="75" name="email" placeholder="Email" type="email" required />
+                </div>
+                <div class="form-group"><input class="form-control" id="id_password" maxlength="128" name="password" placeholder="Contraseña" type="password" required />
+                </div>
+                <button class="btn btn-light btn-block">
+                    Enviar 
+                </button>
+            </form>
+        </div>
+    </div>
+    <div class="footer">
+        <footer>
+            <p>Grinby Market</p>
+        </footer>
+    </div>
+</div>

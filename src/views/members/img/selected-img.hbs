@@ -1,0 +1,27 @@
+{{> navigation}}
+
+    <div class="container p-4">
+        <div class="row"></div>
+            <div class="col-md-8 mx-auto">
+               
+                 <div class="card animated fadeInDown">
+                    <img src="{{image.path}}" class="card-img-top" alt="{{image.filename}}">
+                    <div class="card-body"> 
+                        <h5 class="card-title">{{image.title}}</h5>
+                        <p class="card-text">{{image.description}}</p>
+                        <p class="card-text">{{image.price}}</p>
+                        <a href="/members/img/{{image._id}}/delete" class="btn btn-danger btn-block"> Delete </a>
+                    </div>
+                    <div class="card-footer">
+                    <p>
+                        <i class="far fa-clock"></i>
+                        {{timeago image.created_at}}
+                    </p>
+                    </div>
+                </div> 
+               
+
+               
+            </div>
+        </div>
+    </div>

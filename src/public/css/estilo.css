@@ -1,0 +1,562 @@
+/* Home Page */
+ul{
+    list-style-type: none;
+}
+li{
+    display: block;
+    
+}
+
+.container{
+    max-width: 85% !important;
+    display: grid;
+    height: 100vh;
+    font-family:Lato, sans-serif;
+    grid-template-areas: "nav nav nav nav nav"
+                         "header1 header2 header3 header4 header5"
+                         "banner banner banner banner banner"
+                         "comercios comercios comercios comercios comercios"
+                         "buscador buscador buscador buscador buscador"
+                         "ofrecemos ofrecemos ofrecemos ofrecemos ofrecemos"
+                         "unete unete unete unete unete"
+                         "blog blog blog blog blog"
+                         "links links links links links"
+                         "footer footer footer footer footer";                 
+
+
+
+}
+
+.nav-login {
+    grid-area: nav;
+    background-color: #000 !important;
+}
+
+.nav-login a{
+    color: #fff;
+    text-decoration: none;
+    line-height: 1.2;
+}
+
+.span1{
+    grid-area: header1;
+    display: grid;
+    align-items: center;
+    justify-items: end;
+}
+
+.span2{
+    grid-area: header2;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+.span3{
+    grid-area: header3;
+    display:block;
+    margin: auto;
+}
+
+.span4{
+    grid-area: header4;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+.span5{
+    grid-area: header5;
+    display: grid;
+    align-items: center;
+    justify-items: start;
+}
+
+.nav-bar{
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 3px;
+}
+
+/*.nav-conteiner{
+    grid-area: header;
+}*/
+
+.foto-de-frase{
+    grid-area: banner;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -ms-flex-align: center;
+    align-items: center;
+    display: flex;
+    min-height: 10rem;
+    padding: 3.75rem 0;
+    position: relative;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+   
+    
+ 
+}
+
+.frase{
+    display: block;
+    position: absolute;
+    text-align: center;
+    margin: auto 10%; ;
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: 3px;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.2;
+    font-family: 'Cormorant Garamond', serif;
+    color: aliceblue;
+
+}
+
+.frase::after, ::before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.items{
+    grid-area: comercios;
+    margin: 30px;
+
+}
+#texto{
+    text-align: center;
+    text-transform: uppercase;
+    margin: 30px auto;
+    font-size: 1.2rem;
+    font-weight: 300;
+    letter-spacing: 3px;
+    line-height: 3;
+
+}
+
+.secuencia{
+    display: grid;
+    margin: 100px 100px;
+    height: 100%;
+    grid-template: repeat(3,1fr) /  repeat(3,40%);
+    grid-gap: 30px 50px;
+    justify-content: center;
+    align-content: center;
+}
+.i1{
+    background-image:  url(/public/img/ropa.jpg);
+    background-size: cover;
+    filter: brightness(0.9);
+    height: 300px; 
+    width: 100%;
+}
+
+.i2{
+    background-image:  url(/public/img/cosmetica.jpg);
+    background-size: cover;
+    filter: brightness(0.9);
+    height: 300px; 
+    width: 100%;
+}
+.i3{
+    background-image:  url(/public/img/reciclaje.jpg);
+    background-size: cover;
+    filter: brightness(0.9);
+    height: 300px; 
+    width: 100%;
+}
+
+.i4{
+    background-image:  url(/public/img/huerta.jpg);
+    background-size: cover;
+    filter: brightness(0.9);
+    height: 300px; 
+    width: 100%;
+}
+
+.i5{
+    background-image:  url(/public/img/alimentos.jpg);
+    background-size: cover;
+    filter: brightness(0.9);
+    height: 300px; 
+    width: 100%;
+}
+
+.i6{
+    background-image:  url(/public/img/energia.jpg);
+    background-size: cover;
+    filter: brightness(0.9);
+    height: 300px; 
+    width: 100%;
+}
+
+.i7{
+    background-image:  url(/public/img/hogar.jpg);
+    background-size: cover;
+    filter: brightness(0.9);
+    height: 300px; 
+    width: 100%;
+}
+
+.i8{
+    background-image:  url(/public/img/recreacion.jpg);
+    background-size: cover;
+    filter: brightness(0.9);
+    height: 300px; 
+    width: 100%;
+}
+
+.i9{
+    background-image:  url(/public/img/categorias.jpg);
+    background-size: cover;
+    filter: brightness(0.9);
+    height: 300px; 
+    width: 100%;
+}
+
+.a-diseño{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    margin: 30% 10%;
+}
+
+.search{
+    grid-area: buscador;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    background-color: #5E842D;
+
+}
+
+#miBusqueda{
+    background-color: transparent;
+    border: none;
+    margin: 0% 5px;
+    display: inline-block;
+    width: 75%;
+    height: 95%;
+}
+
+.boton{
+    background-color: black;
+    border: none;
+    margin: 0% 7px;
+    display: inline-block;
+    height: 100%;
+    width: 24%;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.form{
+    border: 1px solid black;
+    margin: 20px auto 10px;
+    background-color: #fff;
+    width: 40%;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 5px 0px;
+    margin-bottom: 25px;
+}
+
+div .search-text{ 
+    color: black;
+    text-transform: uppercase;
+    line-height: 20px;
+    margin-top: 25px;
+    margin-bottom: 0px;
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: 3px;
+
+}
+
+.concept{
+    grid-area: ofrecemos;
+    margin: 0%;
+
+}
+
+.foto-concept {
+    
+    float: left;
+    height: auto;
+    width: 40%;
+    margin: 20px;
+}
+.foto-concept img{
+    height: auto;
+    margin: 10px;
+}
+
+.texto-concept{
+
+    float: right;
+    width: 55%;
+    margin-top:5%;
+}
+
+.texto-concept p{
+        display: block;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        text-align: justify;
+        font-size: 20px;
+}
+
+.texto-concept h2{
+    text-align: center;
+    margin-bottom: 0px;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 3px;
+}
+hr {
+    width: 7%;
+    height: 20%;
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
+
+
+.button-secondary{
+    background-color: transparent;
+    color: #000;
+    border: 1px solid #000;
+    cursor: pointer;
+    display: inline-block;
+    font-size: .8rem;
+    letter-spacing: 2px;
+    max-width: 100%;
+    padding: .7rem 2.8rem;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    align-self: center;
+    margin: 5px 40%;
+}
+
+.participa{
+    grid-area: unete;
+    margin: 0%;
+}
+
+.foto-participa {
+    
+    float: right;
+    height: auto;
+    width: 40%;
+    margin: 20px;
+}
+.foto-concept img{
+    height: auto;
+    margin: 10px;
+}
+
+.texto-participa{
+
+    float: left;
+    width: 55%;
+    margin-top:5%;
+}
+
+.texto-participa p{
+        display: block;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        text-align: justify;
+        font-size: 20px;
+}
+
+.texto-participa h2{
+    text-align: center;
+    margin-bottom: 0px;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 3px;
+}
+
+
+.outstaning-blog-post{
+    grid-area: blog;
+}
+
+.item-post{
+    display: grid;
+    grid-template-areas: "foto foto foto"
+                         "info info info";
+    margin-top: 0px;
+    margin-bottom: 15px;
+
+}
+
+.hr-post{
+    grid-area: info;
+    justify-self: center;
+    width: 45%;
+}
+
+.item-post img{
+    grid-area: foto;
+    justify-self: center;
+    width: 40%;
+}
+
+#post-blog{
+    margin: 25px 10% 0px 15%;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 3px;
+
+}
+
+.links{
+    grid-area: links;
+    background-color: #afd91a;
+}
+
+.info-imp{
+    float: left;
+    cursor: pointer;
+    font-size: .8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-left: 30%;
+   
+
+}
+
+.info-imp a{
+    color: #000;
+    text-decoration: none;
+    line-height: 1.2;
+}
+
+.info-imp li{
+    list-style: height 1.5em;
+    margin-bottom: 7px;
+}
+
+.icon{
+    display: inline;
+    margin: 0px 10%;
+}
+
+.logo-pie{
+     margin: 10px 50%;  
+     display: block;
+
+}
+
+.footer{
+    grid-area: footer;
+    background-color: #000;
+    color: #fff;
+    text-align: end;
+    font-size: 0.8rem
+}
+
+/*.global{
+   border: 1px solid red;
+}*/
+
+.imagen-logo{
+    display: block;
+    margin: 15px auto;
+}
+
+.imagen-banner{
+   
+    transform: translate(-50%,-50%);
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    filter:brightness(0.5);
+
+}
+
+
+.style ul li {
+    margin: 5% 13% !important;
+}
+
+.style ul li a {
+    font-size: 0.7rem !important ;
+    text-transform: uppercase !important;
+    font-weight: 500 !important;
+    letter-spacing: 3px !important;
+}
+
+/* Account Member Register-Login page */
+
+.navbar{
+    height: 10% !important;
+    width: 100% !important;
+}
+
+.row{
+    margin-right: auto !important;
+    margin-left: auto !important;
+}
+
+.style_membership .form_nav{
+    background-color:rgb(64, 65, 64);
+    /*#afd91a*/
+}
+
+.style_membership .form_nav img {
+    margin:0px auto 20px !important;
+	display:block !important;
+}
+
+.style_membership .form_to_the_right {
+    float: right;
+    width: 50%;
+    background-color: rgb(231, 233, 229);
+    color: #17202A;
+    height: 830px !important;
+    margin: 0px !important;
+}
+
+.style_membership .form_to_the_left {
+    float: left;
+    width: 50%;
+    background-color: #5E842D;
+    color: black;
+    height: 830px !important;
+    margin: 0px !important;
+
+}
+
+.style_membership footer {
+    clear: both;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    
+}
