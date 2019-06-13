@@ -82,17 +82,20 @@ function armarListaPorCategoriaYLetra (params) {
     for (let index = 0; index < listaActualCompleta.lista.length; index++) {
 
         let bucleDeLetras = listaActualCompleta.lista[index].Nombre.charAt(0).toUpperCase();
-      
-      
+        
+        
+  
           if (bucleDeLetras == letraActual) {
       
             organizarPorLetras.lista.push(listaActualCompleta.lista[index]);
+        
             
             
           } else {
-           
             
             listaActualCompleta.listaParcial.push(organizarPorLetras);
+           
+            
             letraActual = bucleDeLetras
       
             organizarPorLetras = {
@@ -105,7 +108,7 @@ function armarListaPorCategoriaYLetra (params) {
           }
     }
     
-
+    
     listaCompleta.push(listaActualCompleta);
 
     categoriaActual = bucleDeCategoria;
@@ -120,6 +123,7 @@ function armarListaPorCategoriaYLetra (params) {
 
   }
   }
+
 
 
 

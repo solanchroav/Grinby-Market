@@ -10,6 +10,7 @@ const image = require('../controllers/image');
 const user = require('../controllers/user');
 const stores = require('../controllers/store');
 const contact = require('../controllers/contact');
+const commerce = require('../stores/agroRobots');
 
 
 // Models
@@ -28,7 +29,8 @@ module.exports = app => {
   router.get('/members/img/:id', stores.imgs);
   router.get('/members/img/:id/delete', stores.delete);
   router.get('/members/logout', stores.logout);
- 
+  router.get('/storeView/agroRobots', commerce.index);
+
   //Post USER SIGN-UP
 
   router.post('/users/signup', async (req, res) => {
@@ -180,10 +182,16 @@ failureFlash: true
 /*console.log(req.file);
 console.log(req.body);*/
 
+
+
 router.post('/members/upload-products', async (req, res) => {
 
      const image = new Image()
      image.member = req.user.id; 
+     const id = image.member.toString()
+     const brand = await Member.findById(id);
+     console.log(brand);
+     image.brand = brand.brand_name;
      image.title = req.body.title;
      image.description = req.body.description;
      image.price = req.body.price;

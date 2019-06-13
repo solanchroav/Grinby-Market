@@ -11,6 +11,7 @@ const imageSchema = new Schema({
     mimetype: {type: String},
     size: { type: Number},
     member: {type: String, required: true},
+    brand: {type: String, required: true},
     created_at: {type: Date, default: Date.now()}
 });
 
