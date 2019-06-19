@@ -7,27 +7,29 @@
 
                 <div class="card animated fadeInDown">
                     <img src="{{path}}" class="card-img-top" alt="{{filename}}">
-                    <div class="card-body">
-                        <h5 class="card-title">{{title}}</h5>
+                    <div class="card-body" id="tester" >
+                        <h5 class="card-title">{{title}} </h5>
                         <p class="card-text">{{description}}</p>
                         <p class="card-text">{{price}}</p>
                         <a href="" class="btn btn-secondary"> Comprar </a> 
                         <span class="nav-item active" style="font-size: 1.5em; color:#afd91a ;">
-                            <a href="/storeView/agroRobots" style="color:#afd91a !important ; display: inline-block !important; float: right !important"
-                             onclick="f()"><i id="heart" class="fas fa-heart"></i></a>
+                            <a href="#" style="color:#afd91a !important ; display: inline-block !important; float: right !important"  id="beta" data-id= "{{_id}}"><i id="heart" class="fas fa-heart"></i></a>
                         </span>
                     </div>
                     <div class="card-footer">
                         <p>
                             <i class="far fa-clock"></i>
-                            {{timeago image.created_at}}
+                            {{timeago created_at}}
                         </p>
                     </div>
-                    
                 </div>
+             <input type="hidden" value="{{title}}" class="brands" data-id= "{{_id}}">
+             <input type="hidden" value="{{description}}" class="brands" data-id= "{{_id}}">
+             <input type="hidden" value="{{price}}" class="brands" data-id= "{{_id}}">
+             <input type="hidden" value="{{brand}}" class="brands" data-id= "{{_id}}">
                {{/each}}
             </div>
         </div>
     </div>
 
-
+ <script src="/public/js/index.js"></script>  

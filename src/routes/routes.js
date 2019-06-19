@@ -16,13 +16,13 @@ const commerce = require('../stores/agroRobots');
 // Models
 const { Data, Image, Member, Users } = require('../models');
 
-
 module.exports = app => {
 
   router.get('/', home.index);
   router.get('/products', image.index);
   router.get('/contact', contact.index);
   router.get('/users/signup', user.account);
+  router.get('/users/account-user', user.index);
   router.get('/members/account-member', stores.entry);
   router.get('/members/upload-products', stores.upload);
   router.get('/members/store', stores.index);
@@ -208,9 +208,6 @@ router.post('/members/upload-products', async (req, res) => {
   
 
 });
-
-
-
 
   app.use(router);
 

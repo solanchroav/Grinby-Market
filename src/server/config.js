@@ -13,7 +13,6 @@ const uuid = require('uuid/v4');
 
 const routes = require('../routes/routes')
 
-
 module.exports = app => {
 
     //Initializations
@@ -36,9 +35,6 @@ module.exports = app => {
     //Middlewares
     
     app.use(morgan('dev'));
-
-
-    
 
     //Help to understand the data extracted from the form
     app.use(express.urlencoded({extended: false}));
@@ -73,12 +69,10 @@ module.exports = app => {
     next();
   });
   
-
-
-
     // Routes
     routes(app);
 
+    
     // Static files
     app.use('/public', express.static(path.join(__dirname, '../public')));
   
@@ -86,7 +80,7 @@ module.exports = app => {
     if('development' === app.get('env')) {
       app.use(errorHandler());
     }
-    
+
   
     return app;
 
