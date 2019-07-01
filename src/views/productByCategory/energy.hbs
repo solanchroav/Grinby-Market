@@ -1,18 +1,12 @@
 {{>navigation}}
 
 {{#each lista}}
-    <div>{{this.categoria}}</div>
+    <div>{{this.letra}}</div>
     
-    
-    {{#each this.listaParcial}}
-       <div>{{this.letra}}</div>
        {{#each this.lista}}
         <ul> 
             <li><a href="/storeView/agroRobots" data-brand="{{this.Nombre}}" class="products">{{this.Nombre}}</a></li> 
         </ul>
        {{/each}}
-    {{/each}}
     
 {{/each}}
-
-<script src="/public/js/products.js"></script>  

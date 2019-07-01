@@ -20,6 +20,15 @@ module.exports = app => {
 
   router.get('/', home.index);
   router.get('/products', image.index);
+  router.get('/productByCategory/energy', image.energy);
+  router.get('/productByCategory/clothes', image.clothes);
+  router.get('/productByCategory/cosmetic', image.cosmetic);
+  router.get('/productByCategory/food', image.food);
+  router.get('/productByCategory/garden', image.garden);
+  router.get('/productByCategory/home', image.home);
+  router.get('/productByCategory/recycle', image.recycle);
+  router.get('/productByCategory/recreation', image.recreation);
+  router.get('/productByCategory/nonListedCategories', image.nonListedCategories);
   router.get('/contact', contact.index);
   router.get('/users/signup', user.account);
   router.get('/users/account-user', user.index);
@@ -30,6 +39,7 @@ module.exports = app => {
   router.get('/members/img/:id/delete', stores.delete);
   router.get('/members/logout', stores.logout);
   router.get('/storeView/agroRobots', commerce.index);
+  
 
   //Post USER SIGN-UP
 
@@ -208,6 +218,8 @@ router.post('/members/upload-products', async (req, res) => {
   
 
 });
+
+router.get('*', user.error);
 
   app.use(router);
 

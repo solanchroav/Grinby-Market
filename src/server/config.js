@@ -1,4 +1,4 @@
-//LLamada a librerias 
+//Get libraries
 const path = require('path');
 const morgan = require('morgan');
 const errorHandler = require('errorhandler');
@@ -68,13 +68,13 @@ module.exports = app => {
     res.locals.user = req.user || null;
     next();
   });
-  
-    // Routes
-    routes(app);
-
     
     // Static files
     app.use('/public', express.static(path.join(__dirname, '../public')));
+
+    // Routes
+    routes(app);
+
   
     // Error Handling
     if('development' === app.get('env')) {
