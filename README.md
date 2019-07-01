@@ -1,4 +1,4 @@
-# * [Dropwizard](http://www.grinbymarket.com/) - Grinby
+# * [Grinby](http://www.grinbymarket.com/) 
 
 Somos un espacio de encuentro que conecta personas interesadas en el consumo responsable con las marcas y empresas que generan un impacto positivo en la sociedad y el ambiente. Buscamos crear una nueva manera de vender y comprar, que redefina nuestra visión sobre el verdadero valor de lo que consumimos.
 
